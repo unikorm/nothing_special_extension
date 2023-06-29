@@ -9,12 +9,18 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand: dajakasprostost.start"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [{
       "command": "dajakasprostost.helloWorld",
       "title": "Hello World"
+    },
+    {
+      "command": "dajakasprostost.start",
+      "title": "start"
     }]
   },
   "scripts": {

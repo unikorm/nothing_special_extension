@@ -24,6 +24,15 @@ function activate(context) {
 		vscode.window.showInformationMessage('Hello World from dajakaSprostost!');
 	});
 
+
+
+	let disposablee = vscode.commands.registerCommand('dajakasprostost.start', function () {
+
+		vscode.window.showInformationMessage('start');
+	});
+
+
+
 	context.subscriptions.push(disposable);
 }
 
