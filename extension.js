@@ -28,8 +28,41 @@ function activate(context) {
 
 	let disposablee = vscode.commands.registerCommand('dajakasprostost.start', function () {
 
-		vscode.window.showInformationMessage('start');
+		   // Create and show panel
+		   const panel = vscode.window.createWebviewPanel(
+			'loveYou',
+			'princess',
+			vscode.ViewColumn.Beside,
+			{}
+		  );
+	
+		  // And set its HTML content
+		  panel.webview.html = getWebviewContent();
 	});
+
+	function getWebviewContent() {
+		return `<!DOCTYPE html>
+	  <html lang="en">
+	  <head>
+		  <meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  <title>Princess</title>
+		  <link
+    		rel="stylesheet"
+    		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  		 />
+		  <style>
+		  .animate__animated.animate__pulse {
+			--animate-duration: .2s;
+		  }
+
+		  </style>
+	  </head>
+	  <body>
+		  <img class="animate__animated animate__pulse animate__infinite" src="https://www.rd.com/wp-content/uploads/2020/11/GettyImages-889552354-e1606774439626.jpg" width="100%" />
+	  </body>
+	  </html>`;
+	  }
 
 
 
